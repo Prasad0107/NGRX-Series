@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>UserId</th>
+    </tr>
+    <tr *ngFor="let data of userData$ | async">
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.userId}}</td>
+    </tr>
+</table>
