@@ -21,8 +21,6 @@ const userReducer = createReducer(
         return { ...state, loading: false, };
     }),
     on(userDetailSuccess, (state, { data }) => {
-        console.log("prasad1", data);
-
         return { ...state, loading: false, data };
     }),
     on(userDetailFailure, (state, { error }) => {
@@ -32,7 +30,5 @@ const userReducer = createReducer(
 
 
 export function UserDetailsReducer(state: any, action: Action) {
-    console.log("Prasad", state, "Jagtap", action);
-
     return userReducer(state, action);
 }

@@ -13,8 +13,6 @@ export class UserDetailInteractor {
         return this.userDetailService.getUserDetail().
             pipe(
                 map((data) => {
-                    console.log("Prasad2", data);
-
                     return userDetailSuccess({ data });
                 }),
                 catchError((err) => of(userDetailFailure({ error: err })))
